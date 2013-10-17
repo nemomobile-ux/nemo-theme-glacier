@@ -3,23 +3,17 @@ Name:       nemo-theme-glacier
 %define theme_name glacier
 # << macros
 
-Summary:    Nemo Mobile glacier theme
+Summary:    Nemo Mobile Glacier UI theme
 Version:    1.0.0
-Release:    3
+Release:    0.0.0
 Group:      System/GUI/Other
-License:    BSD/LGPLv2.1
+License:    CC BY-SA 3.0
 BuildArch:  noarch
 URL:        https://github.com/nemomobile/nemo-theme-default
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   gconf
 BuildRequires: fdupes
 BuildRequires: qt5-qmake
-Provides:   qt-components-base-icons
-Provides:   nemo-theme-graphics
-Provides:   meegotouch-theme-graphics = 1.0.3
-Obsoletes:  meegotouch-theme-graphics <= 1.0.2.1
-Obsoletes:  meegotouch-theme-ce <= 0.1.26
-Provides:  meegotouch-theme-ce = 0.1.26.1
  
 %description
 This package contains default theme graphic files.
