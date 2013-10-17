@@ -4,8 +4,8 @@ Name:       nemo-theme-glacier
 # << macros
 
 Summary:    Nemo Mobile Glacier UI theme
-Version:    1.0.0
-Release:    0.0.0
+Version:    0.0.0
+Release:    1
 Group:      System/GUI/Other
 License:    CC BY-SA 3.0
 BuildArch:  noarch
@@ -29,8 +29,8 @@ make %{?jobs:-j%jobs}
 %install
 rm -rf %{buildroot}
 %qmake5_install
-ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-l-terminal.png /usr/share/themes/glacier/meegotouch/icons/icon-app-terminal.png
-ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-l-settings.png /usr/share/themes/glacier/meegotouch/icons/icon-app-settings.png
+ln -sf %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-terminal.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-app-terminal.png
+ln -sf %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-settings.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-app-settings.png
 
 
 %fdupes  %{buildroot}%{_datadir}
