@@ -29,8 +29,8 @@ make %{?jobs:-j%jobs}
 %install
 rm -rf %{buildroot}
 %qmake5_install
-ln -sf %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-terminal.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-app-terminal.png
-ln -sf %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-settings.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-app-settings.png
+ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-l-terminal.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-app-terminal.png
+ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-l-settings.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-app-settings.png
 
 
 %fdupes  %{buildroot}%{_datadir}
