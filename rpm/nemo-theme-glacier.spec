@@ -42,11 +42,9 @@ Config_Src=`/usr/bin/gconftool-2 --get-default-source`
 Theme_Name=`/usr/bin/gconftool-2 --direct --config-source $Config_Src \
             -g $Theme_Key`
 
-if [ -z $Theme_Name ]; then
-    echo "Setting theme name to %{theme_name}"
-    /usr/bin/gconftool-2 --direct --config-source $Config_Src \
+echo "Overwriting global theme to %{theme_name}"
+/usr/bin/gconftool-2 --direct --config-source $Config_Src \
     -s -t string $Theme_Key %{theme_name}
-fi
 
 %files
 %defattr(-,root,root,-)
