@@ -9,7 +9,7 @@ Release:    1
 Group:      System/GUI/Other
 License:    CC BY-SA 3.0
 BuildArch:  noarch
-URL:        https://github.com/nemomobile/nemo-theme-default
+URL:        https://github.com/nemomobile-ux/nemo-theme-glacier
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   gconf
 Requires:   meegotouch-theme-darko
