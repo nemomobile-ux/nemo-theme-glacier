@@ -12,6 +12,7 @@ BuildArch:  noarch
 URL:        https://github.com/nemomobile/nemo-theme-default
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   gconf
+Requires:   meegotouch-theme-darko
 BuildRequires: fdupes
 BuildRequires: qt5-qmake
  
