@@ -47,6 +47,15 @@ echo "Overwriting global theme to %{theme_name}"
 /usr/bin/gconftool-2 --direct --config-source $Config_Src \
     -s -t string $Theme_Key %{theme_name}
 
+Wall_P_Key="/desktop/meego/background/portrait/picture_filename"
+Wall_L_Key="/desktop/meego/background/landscape/picture_filename"
+
+echo "Overwriting global default wallpapers"
+/usr/bin/gconftool-2 --direct --config-source $Config_Src \
+    -s -t string $Wall_P_Key "image://theme/wallpaper-portrait-flower"
+/usr/bin/gconftool-2 --direct --config-source $Config_Src \
+    -s -t string $Wall_L_Key "image://theme/wallpaper-landscape-flower"
+
 %files
 %defattr(-,root,root,-)
 %{_datadir}/themes/glacier/index.theme
