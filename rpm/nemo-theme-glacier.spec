@@ -12,7 +12,6 @@ BuildArch:  noarch
 URL:        https://github.com/nemomobile-ux/nemo-theme-glacier
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   gconf
-Requires:   meegotouch-theme-darko
 BuildRequires: fdupes
 BuildRequires: qt5-qmake
  
