@@ -31,6 +31,7 @@ rm -rf %{buildroot}
 %qmake5_install
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-terminal.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-terminal.png
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-settings.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-settings.png
+ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-screenshot.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-launcher-screenshot.png
 
 
 %fdupes  %{buildroot}%{_datadir}
