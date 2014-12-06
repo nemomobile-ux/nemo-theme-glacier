@@ -60,5 +60,6 @@ echo "Overwriting global default wallpapers"
 %defattr(-,root,root,-)
 %{_datadir}/themes/glacier/index.theme
 %{_datadir}/themes/glacier/meegotouch/icons
+%{_datadir}/sounds/glacier/stereo
 
 
