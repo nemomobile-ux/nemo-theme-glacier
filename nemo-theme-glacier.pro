@@ -10,4 +10,8 @@ cc3.files = cc3/icons
 cc3.path = $$THEME_DIR/glacier/meegotouch
 cc3.CONFIG += no_check_exist
 
-INSTALLS += index cc3
+sounds.files = sounds/glacier
+sounds.path = /usr/share/sounds/
+sounds.CONFIG += no_check_exist
+
+INSTALLS += index cc3 sounds
