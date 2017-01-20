@@ -11,7 +11,7 @@ License:    CC BY-SA 3.0
 BuildArch:  noarch
 URL:        https://github.com/nemomobile-ux/nemo-theme-glacier
 Source0:    %{name}-%{version}.tar.bz2
-Requires:   gconf
+
 BuildRequires: fdupes
 BuildRequires: qt5-qmake
  
@@ -53,24 +53,6 @@ ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-weather.png %{buildro
 %fdupes  %{buildroot}%{_datadir}
 
 %post
-Theme_Key="/meegotouch/theme/name"
-Config_Src=`/usr/bin/gconftool-2 --get-default-source`
-
-Theme_Name=`/usr/bin/gconftool-2 --direct --config-source $Config_Src \
-            -g $Theme_Key`
-
-echo "Overwriting global theme to %{theme_name}"
-/usr/bin/gconftool-2 --direct --config-source $Config_Src \
-    -s -t string $Theme_Key %{theme_name}
-
-Wall_P_Key="/desktop/meego/background/portrait/picture_filename"
-Wall_L_Key="/desktop/meego/background/landscape/picture_filename"
-
-echo "Overwriting global default wallpapers"
-/usr/bin/gconftool-2 --direct --config-source $Config_Src \
-    -s -t string $Wall_P_Key "image://theme/wallpaper-portrait-flower"
-/usr/bin/gconftool-2 --direct --config-source $Config_Src \
-    -s -t string $Wall_L_Key "image://theme/wallpaper-landscape-flower"
 
 %files
 %defattr(-,root,root,-)
