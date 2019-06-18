@@ -1,8 +1,4 @@
 Name:       nemo-theme-glacier
-# >> macros
-%define theme_name glacier
-# << macros
-
 Summary:    Nemo Mobile Glacier UI theme
 Version:    0.0.0
 Release:    1
@@ -11,24 +7,27 @@ License:    CC BY-SA 3.0
 BuildArch:  noarch
 URL:        https://github.com/nemomobile-ux/nemo-theme-glacier
 Source0:    %{name}-%{version}.tar.bz2
-
-BuildRequires: fdupes
-BuildRequires: qt5-qmake
  
 %description
-This package contains default theme graphic files.
+This package contains glacier theme graphic and sounds files.
 
 %prep
 %setup -q -n %{name}-%{version}
 
 %build
-%qmake5
-
-make %{?jobs:-j%jobs}
-
 %install
 rm -rf %{buildroot}
-%qmake5_install
+
+mkdir -p %{buildroot}%{_datadir}/themes/glacier/meegotouch/icons
+mkdir -p %{buildroot}%{_datadir}/themes/glacier/fontawesome/icons
+mkdir -p %{buildroot}%{_datadir}/sounds/glacier/stereo
+
+cp icons/fontawesome/* %{buildroot}%{_datadir}/themes/glacier/fontawesome/icons
+cp icons/meegotouch/* %{buildroot}%{_datadir}/themes/glacier/meegotouch/icons
+cp index.theme %{buildroot}%{_datadir}/themes/glacier/
+
+cp sounds/glacier/stereo/* %{buildroot}%{_datadir}/sounds/glacier/stereo
+
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-terminal.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-terminal.png
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-settings.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-l-settings.png
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-screenshot.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-launcher-screenshot.png
@@ -49,8 +48,6 @@ ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-settings.png %{buildr
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-terminal.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-launcher-shell.png
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-packages.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-launcher-store.png
 ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-weather.png %{buildroot}/usr/share/themes/glacier/meegotouch/icons/icon-launcher-weather.png
-
-%fdupes  %{buildroot}%{_datadir}
 
 %post
 
