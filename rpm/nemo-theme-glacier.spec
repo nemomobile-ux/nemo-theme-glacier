@@ -3,7 +3,7 @@ Summary:    Nemo Mobile Glacier UI theme
 Version:    0.0.0
 Release:    1
 Group:      System/GUI/Other
-License:    CC BY-SA 3.0
+License:    LGPLv2.1
 BuildArch:  noarch
 URL:        https://github.com/nemomobile-ux/nemo-theme-glacier
 Source0:    %{name}-%{version}.tar.bz2
