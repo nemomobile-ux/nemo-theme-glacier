@@ -1,6 +1,6 @@
 Name:       nemo-theme-glacier
 Summary:    Nemo Mobile Glacier UI theme
-Version:    0.0.0
+Version:    0.1.2
 Release:    1
 Group:      System/GUI/Other
 License:    LGPLv2.1
