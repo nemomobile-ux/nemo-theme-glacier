@@ -53,9 +53,5 @@ ln -sf /usr/share/themes/glacier/meegotouch/icons/icon-app-weather.png %{buildro
 
 %files
 %defattr(-,root,root,-)
-%{_datadir}/themes/glacier/index.theme
-%{_datadir}/themes/glacier/meegotouch/icons
-%{_datadir}/themes/glacier/fontawesome/icons
-%{_datadir}/sounds/glacier/stereo
-
-
+%{_datadir}/themes/glacier
+%{_datadir}/sounds/glacier
